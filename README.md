@@ -7,7 +7,7 @@ Creada con
  - Frontend con HTML, CSS - Tailwind, y Javascript
 
 Para ejecutar:  
-*Se debe tener instalado python, pip y viertualenv*  
+*Se debe tener instalado python, pip y virtualenv*  
 En primer lugar, se debe descargar y descomprimir el proyecto, después, ejecutar:  
   
 **Para Windows:**
