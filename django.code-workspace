@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../django/mslearn-django-views-templates/starter"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
