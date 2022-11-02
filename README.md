@@ -13,16 +13,16 @@ En primer lugar, se debe descargar y descomprimir el proyecto, después, ejecuta
 **Para Windows:**
 ```  
 virtualenv --python python venv
-pip install -r requirements.txt
 .\venv\Scripts\activate
+pip install -r requirements.txt
 python manage.py runserver
 ```
 
 **Para LINUX:**
 ```  
 python -m venv venv
-pip install -r requirements.txt
 source ./venv/bin/activate
+pip install -r requirements.txt
 python manage.py runserver
 ```
 
