@@ -14,8 +14,37 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+
+admin.site.site_header = 'Funsocore'                    # default: "Django Administration"
+admin.site.index_title = 'Tablas'                 # default: "Site administration"
+admin.site.site_title = 'Funsocore' # default: "Django site admin"
+
+from funsocore.forms import LoginUserPersonalizado
+from django.contrib.auth import views
 
 urlpatterns = [
+   
+    
+     path('admin/login/', views.LoginView.as_view(
+        template_name='admin/login.html',
+        authentication_form=LoginUserPersonalizado),
+        name='login'
+    ),
     path('admin/', admin.site.urls),
+    path("__reload__/", include("django_browser_reload.urls")),
+    
 ]
+"""
+<div class="form-row">
+    {{ form.username.errors }}
+    <label class="username" for="{{form.username.id_for_label}}">Usuario:</label>
+    {{ form.username }}
+  </div>
+  <div class="form-row">
+    {{ form.password.errors }}
+    <label class="login" for="{{form.password.id_for_label}}">Contraseña:</label>
+    {{ form.password }}
+    <input type="hidden" name="next" value="{{ next }}">
+  </div>
+"""

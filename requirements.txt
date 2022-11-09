@@ -2,3 +2,6 @@ django
 pylint
 autopep8
 Pillow
+django-tailwind
+django-crispy-forms
+crispy-tailwind
