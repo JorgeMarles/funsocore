@@ -17,6 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -31,7 +32,7 @@ ALLOWED_HOSTS = []
 STATICFILES_DIRS = [
     "funsocore/static/"
 ]
-
+STATIC_ROOT = os.path.join(SETTINGS_PATH, 'funsocore/static')
 # Application definition
 
 INSTALLED_APPS = [
