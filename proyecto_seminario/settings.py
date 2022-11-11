@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 STATICFILES_DIRS = [
     "funsocore/static/"
 ]
-STATIC_ROOT = os.path.join(SETTINGS_PATH, 'funsocore/static')
+STATIC_ROOT = os.path.join(SETTINGS_PATH, 'static')
 # Application definition
 
 INSTALLED_APPS = [
