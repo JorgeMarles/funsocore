@@ -71,8 +71,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_browser_reload.middleware.BrowserReloadMiddleware",
-    "whitenoise.midddleware.WhiteNoiseMiddleware"
+    "whitenoise.middleware.WhiteNoiseMiddleware"
 ]
+
+
 TEMPLATE_DIRS = (
     os.path.join(SETTINGS_PATH, 'templates'),
 )
