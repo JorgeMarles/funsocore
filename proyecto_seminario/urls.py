@@ -29,7 +29,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
    
     path('',views.TemplateView.as_view(template_name='ppal.html'),name='ppal'),
-    path('/donar',views.TemplateView.as_view(template_name='collab.html'),name='collab'),
+    path('donar',views.TemplateView.as_view(template_name='collab.html'),name='collab'),
      path('admin/login/', views.LoginView.as_view(
         template_name='admin/login.html',
         authentication_form=LoginUserPersonalizado),
