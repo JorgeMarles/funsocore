@@ -1,0 +1,25 @@
+{% load i18n static %}
+{% load tailwind_filters %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_ppal.css' %}">
+    <title>{{site_header | default:_('Funsocore')}}</title>
+    {% tailwind_css %}
+</head>
+<body class="bg-black">
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li><a href="{%url 'login' %}">entrar</a></li>
+        <li><a href="{%url 'collab' %}">entrard</a></li>
+    </ul>
+    {% block contenido %}
+    {% endblock %}
+</body>
+</html>

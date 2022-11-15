@@ -17,15 +17,17 @@ from django.contrib import admin
 from django.urls import include, path
 
 admin.site.site_header = 'Funsocore'                    # default: "Django Administration"
-admin.site.index_title = 'Tablas'                 # default: "Site administration"
+admin.site.index_title = 'Admin'                 # default: "Site administration"
 admin.site.site_title = 'Funsocore' # default: "Django site admin"
 
 from funsocore.forms import LoginUserPersonalizado
 from django.contrib.auth import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
    
-    
+    path('',views.TemplateView.as_view(template_name='ppal.html'),name='ppal'),
+    path('/donar',views.TemplateView.as_view(template_name='collab.html'),name='collab'),
      path('admin/login/', views.LoginView.as_view(
         template_name='admin/login.html',
         authentication_form=LoginUserPersonalizado),
