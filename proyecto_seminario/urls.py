@@ -29,6 +29,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
    
     path('',views.TemplateView.as_view(template_name='ppal.html'),name='ppal'),
+    
     path('donar',views.TemplateView.as_view(template_name='collab.html'),name='collab'),
      path('admin/login/', views.LoginView.as_view(
         template_name='admin/login.html',
@@ -36,9 +37,14 @@ urlpatterns = [
         name='login'
     ),
     path('admin/', admin.site.urls),
+
+    path('blogs/', include('funsocore.urls')), 
+
     path("__reload__/", include("django_browser_reload.urls")),
     
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 """
