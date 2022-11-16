@@ -783,16 +783,16 @@ select {
   margin-right: auto;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .mb-0 {
   margin-bottom: 0px;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .mb-4 {
@@ -805,6 +805,10 @@ select {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .mr-3 {
@@ -851,20 +855,16 @@ select {
   height: 1rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
 .w-full {
   width: 100%;
 }
 
-.w-4 {
-  width: 1rem;
+.w-6 {
+  width: 1.5rem;
 }
 
-.w-2\/4 {
-  width: 50%;
+.w-4 {
+  width: 1rem;
 }
 
 .table-auto {
@@ -887,10 +887,6 @@ select {
 
 .flex-row {
   flex-direction: row;
-}
-
-.place-content-center {
-  place-content: center;
 }
 
 .items-center {
@@ -961,6 +957,11 @@ select {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
@@ -969,11 +970,6 @@ select {
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1019,6 +1015,11 @@ select {
   line-height: 1;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1043,6 +1044,11 @@ select {
 
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1075,12 +1081,26 @@ select {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.\!underline {
+  text-decoration-line: underline !important;
+}
+
+.\!decoration-white {
+  text-decoration-color: #fff !important;
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@tailwind typography;
+
+.hover\:\!underline:hover {
+  text-decoration-line: underline !important;
 }
 
 .focus\:outline-none:focus {

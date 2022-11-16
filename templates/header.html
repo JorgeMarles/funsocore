@@ -11,12 +11,12 @@
     <title>{{site_header | default:_('Funsocore')}}</title>
     {% tailwind_css %}
 </head>
-<body class="bg-black">
+<body>
     <ul>
         <li>a</li>
         <li>b</li>
         <li>lizzie</li>
-        <li><a href="{%url 'login' %}?next=/admin/">entrar</a></li>
+        <li><a class="w-full bg-gray-200" href="{%url 'login' %}?next=/admin/">entrar</a></li>
         <li><a href="{%url 'collab' %}">entrard</a></li>
     </ul>
     {% block contenido %}

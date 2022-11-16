@@ -13,7 +13,7 @@
 <!--<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('xd') }}</a></h1>-->
 <img id="logo-login" src={% static 'img/logo.jpeg' %} alt="Logo">
 <h1 id="site-name">{{site_header | default:_('Funsocore')}}</h1>
-xd
+<a class="!underline hover:!underline !decoration-white" href="{% url 'ppal' %}">Volver</a>
 {% endblock %}
 
 {% block bodyclass %}{{ block.super }} login{% endblock %}
