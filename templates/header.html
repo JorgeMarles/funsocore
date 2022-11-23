@@ -1,25 +1,97 @@
-{% load i18n static %}
-{% load tailwind_filters %}
-{% load tailwind_tags %}
+{% load i18n static %} {% load tailwind_filters %} {% load tailwind_tags %}
+
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style_ppal.css' %}">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style_ppal.css' %}" />
     <title>{{site_header | default:_('Funsocore')}}</title>
     {% tailwind_css %}
-</head>
-<body>
-    <ul>
-        <li>a</li>
-        <li>b</li>
-        <li>lizzie</li>
-        <li><a class="w-full bg-gray-200" href="{%url 'login' %}?next=/admin/">entrar</a></li>
-        <li><a href="{%url 'collab' %}">entrard</a></li>
-    </ul>
-    {% block contenido %}
-    {% endblock %}
-</body>
+    <title>Document</title>
+  </head>
+  <body class="bg-cyan-500">
+    <section class="bg-white mt-20 mr-20 ml-20">
+      <article class="flex justify-start">
+        <a href="{% url 'ppal' %}">
+          <figure class="ml-5 mt-5">
+            <img
+              class="h-45 shadow-2xl"
+              src="{% static 'img/logo.jpeg' %}"
+              alt=""
+            />
+          </figure>
+        </a>
+        <a href="{% url 'ppal' %}">
+          <h1 class="text-right text-8xl ml-8 mr-28 mt-10">FUNSOCORE</h1>
+        </a>
+        <div class="w-full text-right m-8"><a href="{%url 'login' %}?next=/admin/"><b>Administracion</b></a></div>
+      </article>
+
+      
+      <div class="grid lg:grid-cols-3 gap-3 flex">
+        <a href="{% url 'post_lista' %}">
+          <figure class="cursor-pointer hover:scale-110">
+            <p class="font-mono text-center text-3xl pt-16 pb-10">
+              Nuestros Proyectos
+            </p>
+            <img
+              class="w-75 h-75 pl-10"
+              src="{% static 'img/nuestros_proyectos.png' %}"
+              alt=""
+            />
+          </figure>
+        </a>
+        <figure class="cursor-pointer hover:scale-110">
+          <p class="font-mono text-center text-4xl pt-16 pb-10">Novedades</p>
+          <img
+            class="pr-3 pl-3 w-70 h-70"
+            src="{% static 'img/novedades.png' %}"
+            alt=""
+          />
+        </figure>
+        <figure class="cursor-pointer hover:scale-110">
+          <p class="font-mono text-center text-4xl pt-16 pb-10">Ayúdanos</p>
+          <img
+            class="pr-10 w-75 h-75"
+            src="{% static 'img/ayudanos.png' %}"
+            alt=""
+          />
+        </figure>
+      </div>
+      <div class="mt-10">{% block contenido %} {% endblock %}</div>
+      <div class="pt-16">
+        <footer class="w-full bg-yellow-200 pt-6 pb-3">
+          <div class="mx-auto w-9/12 text-white flex justify-between">
+            <p
+              class="cursor-pointer text-blue-900 font-bold italic underline decoration-dashed text-3xl hover:text-red-900 hover:scale-110"
+            >
+              ¿Quiénes somos?
+            </p>
+            <div class="flex">
+              <a
+                class="cursor-pointer hover:scale-150 mr-3 h-14 w-14 duration-300 bg-green-500 items-center flex justify-center rounded.full"
+                href="#"
+              >
+                <i class="text-3xl fab fa-whatsapp"></i>
+              </a>
+              <a
+                class="cursor-pointer hover:scale-150 mr-3 h-14 w-14 duration-300 bg-blue-700 items-center flex justify-center rounded.full"
+                href="#"
+              >
+                <i class="text-3xl fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </body>
 </html>

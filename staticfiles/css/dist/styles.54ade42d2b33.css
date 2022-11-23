@@ -774,10 +774,6 @@ select {
   right: 0px;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-8 {
   margin: 2rem;
 }
@@ -1207,6 +1203,11 @@ select {
   line-height: 2rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1215,16 +1216,6 @@ select {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {

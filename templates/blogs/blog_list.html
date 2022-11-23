@@ -3,12 +3,11 @@
 {% block contenido %}
 
 <img class="w-full" src="{% static 'img/titulo-blogs.png' %}" alt="">
-
+<div class="hidden bg-indigo-900 bg-fuchsia-900">colores</div>
 <div class="grid grid-cols-2">
 {% for blog in posts %}
-    <div class="bg-blue-300 rounded m-8 flex flex-col items-center">
+    <div class="bg-{% cycle 'indigo' 'fuchsia' %}-900 text-white rounded m-8 flex flex-col items-center">
         <p class="text-2xl mt-4"><a href="{% url 'post_detalle' blog.id %}">{{blog.title}}</a></p>
-        <p class="text-xs">{{blog.slug}}</p>
         <figure>
             <img width="290" src="{{blog.photo.url}}" alt="foto_{{blog.title}}" srcset="">
             <figcaption>Por {{blog.author}} <br> <i>{{blog.created_on}}</i></figcaption>

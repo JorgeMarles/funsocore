@@ -1,6 +1,17 @@
 {% extends '../header.html' %}
-
+{% load static %}
 
 {% block contenido %}
-{{ post.title }}
+
+<main class="m-2">
+    <h1 class="text-4xl font-bold">{{post.title}}</h1>
+    <i class="text-lg">Por {{post.author}} el {{post.created_on}}</i>
+    <img class="w-full" src="{{post.photo.url}}" alt="foto_{{post.title}}" srcset="">
+    <br><br>
+    {% autoescape on %}
+        {{ post.content|linebreaksbr}}
+    {% endautoescape %}
+</main>
+
+
 {% endblock %}
