@@ -774,12 +774,12 @@ select {
   right: 0px;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-8 {
   margin: 2rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .m-0 {
@@ -912,8 +912,8 @@ select {
   height: 1rem;
 }
 
-.w-60 {
-  width: 15rem;
+.w-auto {
+  width: auto;
 }
 
 .w-full {
@@ -926,6 +926,10 @@ select {
 
 .w-14 {
   width: 3.5rem;
+}
+
+.w-60 {
+  width: 15rem;
 }
 
 .w-6 {
@@ -970,6 +974,10 @@ select {
   flex-direction: column;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
 .items-center {
   align-items: center;
 }
@@ -986,8 +994,16 @@ select {
   justify-content: space-between;
 }
 
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
 .gap-3 {
   gap: 0.75rem;
+}
+
+.justify-self-center {
+  justify-self: center;
 }
 
 .rounded {
@@ -1050,14 +1066,14 @@ select {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.bg-cyan-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-200 {
@@ -1105,8 +1121,22 @@ select {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-amber-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
+}
+
 .fill-current {
   fill: currentColor;
+}
+
+.p-7 {
+  padding: 1.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .px-4 {
@@ -1132,6 +1162,22 @@ select {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .pt-16 {
@@ -1202,6 +1248,11 @@ select {
   line-height: 2.5rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1220,11 +1271,6 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1318,6 +1364,12 @@ select {
 }
 
 @tailwind typography;
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;

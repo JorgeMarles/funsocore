@@ -1,0 +1,27 @@
+{% extends 'header.html' %} {% load static %} {% block contenido %}
+
+  <article class="w-full grid justify-items-stretch grid-cols-55">
+    <figure class="w-full flex justify-center">
+      <img class="w-full shadow-1x1" src="{% static 'img/brand.png' %}" alt="" />
+    </figure>
+  </article>
+
+  <div class="flex justify-self-center grid place-items-center">
+    
+    <p class="bg-yellow-200 p-7">
+        Somos una organización sin ánimo de lucro que desde el 2015
+        trabaja buscando el mejoramiendo de la calidad de vida
+        de comunicades vulnerables en el departamento de 
+        Norte de Santander, Colombia.
+    </p>
+    <figure class="cursor-pointer hover:scale-105 py-5">
+      <img
+        class="pr-5 pl-5 w-30 h-30"
+        src="{% static 'img/Informacion pertinente.png' %}"
+        alt=""
+      />
+    </figure>
+    
+  </div>
+
+{% endblock %}

@@ -1130,10 +1130,6 @@ select {
   fill: currentColor;
 }
 
-.p-7 {
-  padding: 1.75rem;
-}
-
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
