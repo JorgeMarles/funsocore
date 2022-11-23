@@ -52,16 +52,3 @@ urlpatterns = [
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-"""
-<div class="form-row">
-    {{ form.username.errors }}
-    <label class="username" for="{{form.username.id_for_label}}">Usuario:</label>
-    {{ form.username }}
-  </div>
-  <div class="form-row">
-    {{ form.password.errors }}
-    <label class="login" for="{{form.password.id_for_label}}">Contraseña:</label>
-    {{ form.password }}
-    <input type="hidden" name="next" value="{{ next }}">
-  </div>
-"""
