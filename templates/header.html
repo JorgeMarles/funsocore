@@ -39,7 +39,7 @@
       <div class="grid lg:grid-cols-3 gap-3 flex">
         <a href="{% url 'post_lista' %}">
           <figure class="cursor-pointer hover:scale-110">
-            <p class="font-mono text-center text-3xl pt-16 pb-10">
+            <p class="font-mono text-center text-4xl pt-16 pb-10">
               Nuestros Proyectos
             </p>
             <img
@@ -49,22 +49,26 @@
             />
           </figure>
         </a>
-        <figure class="cursor-pointer hover:scale-110">
-          <p class="font-mono text-center text-4xl pt-16 pb-10">Novedades</p>
-          <img
-            class="pr-3 pl-3 w-70 h-70"
-            src="{% static 'img/novedades.png' %}"
-            alt=""
-          />
-        </figure>
-        <figure class="cursor-pointer hover:scale-110">
-          <p class="font-mono text-center text-4xl pt-16 pb-10">Ayúdanos</p>
-          <img
-            class="pr-10 w-75 h-75"
-            src="{% static 'img/ayudanos.png' %}"
-            alt=""
-          />
-        </figure>
+        <a href="{% url 'nov_lista' %}">
+          <figure class="cursor-pointer hover:scale-110">
+            <p class="font-mono text-center text-4xl pt-16 pb-10">Novedades</p>
+            <img
+              class="w-75 h-75 pl-5 pr-5"
+              src="{% static 'img/novedades.png' %}"
+              alt=""
+            />
+          </figure>
+        </a>
+        <a href="{% url 'donar' %}">
+          <figure class="cursor-pointer hover:scale-110">
+            <p class="font-mono text-center text-4xl pt-16 pb-10">Ayúdanos</p>
+            <img
+              class="w-75 h-75 pr-10"
+              src="{% static 'img/ayudanos.png' %}"
+              alt=""
+            />
+          </figure>
+        </a>
       </div>
       <div class="mt-10">{% block contenido %} {% endblock %}</div>
       <div class="pt-16">
@@ -78,16 +82,33 @@
             <div class="flex">
               <a
                 class="cursor-pointer hover:scale-150 mr-3 h-14 w-14 duration-300 bg-green-500 items-center flex justify-center rounded.full"
-                href="#"
+                href="https://wa.me/573115112922"
+                target="_blank"
               >
                 <i class="text-3xl fab fa-whatsapp"></i>
               </a>
               <a
                 class="cursor-pointer hover:scale-150 mr-3 h-14 w-14 duration-300 bg-blue-700 items-center flex justify-center rounded.full"
-                href="#"
+                href="https://web.facebook.com/FUNSOCORE"
+                target="_blank"
               >
                 <i class="text-3xl fab fa-facebook"></i>
               </a>
+              <a
+                class="cursor-pointer hover:scale-150 mr-3 h-14 w-14 duration-300 bg-fuchsia-700 items-center flex justify-center rounded.full"
+                href="https://www.instagram.com/funsocore_oficial/"
+                target="_blank"
+              >
+                <i class="text-3xl fab fa-instagram"></i>
+              </a>
+              <a
+                class="cursor-pointer hover:scale-150 mr-3 h-14 w-14 duration-300 bg-red-700 items-center flex justify-center rounded.full"
+                href="mailto:funsocoreoficial@gmail.com"
+                target="_blank"
+              >
+                <i class="text-3xl far fa-regular fa-envelope"></i>
+              </a>
+              
             </div>
           </div>
         </footer>

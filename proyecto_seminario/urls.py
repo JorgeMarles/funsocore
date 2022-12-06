@@ -45,6 +45,8 @@ urlpatterns = [
 
     path('blogs/', include('funsocore.urls')),
 
+    path('donate/', views.TemplateView.as_view(template_name='donacion.html'), name='donar'),
+
     path("__reload__/", include("django_browser_reload.urls")),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
